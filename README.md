@@ -14,7 +14,7 @@
 ## Установка
 
 ## Требования
-Wallpaper Engine (куплен в Steam)
+Wallpaper Engine (куплен в Steam),
 linux-wallpaperengine (установлен из AUR)
 
 # Скачайте скрипт
