@@ -33,7 +33,7 @@ WALLPAPER_ENGINE="/usr/sbin/linux-wallpaperengine"
 
 SCREEN="HDMI-A-1" 
 
-WALLPAPER_DIR="/home/пользователь/.local/share/Steam/steamapps/workshop/content/431960"
+WALLPAPER_DIR="$HOME/.local/share/Steam/steamapps/workshop/content/431960"
 
 DEFAULT_WALLPAPER="2370927443"                
 
