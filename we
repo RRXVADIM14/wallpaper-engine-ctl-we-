@@ -1,0 +1,126 @@
+#!/bin/bash
+
+# Wallpaper Engine Controller для Noctalia
+# Простая консольная утилита
+
+# Конфигурация
+WALLPAPER_ENGINE="/usr/sbin/linux-wallpaperengine"
+SCREEN="HDMI-A-1"
+WALLPAPER_DIR="/home/rixick/.local/share/Steam/steamapps/workshop/content/431960"
+DEFAULT_WALLPAPER="2370927443"
+
+# Функция: получить список обоев
+list_wallpapers() {
+    echo "📁 Доступные обои:"
+    echo "─────────────────────────────────"
+    ls -1 "$WALLPAPER_DIR" | while read id; do
+        # Пытаемся получить название из project.json
+        if [ -f "$WALLPAPER_DIR/$id/project.json" ]; then
+            name=$(grep -o '"title"[[:space:]]*:[[:space:]]*"[^"]*"' "$WALLPAPER_DIR/$id/project.json" | head -1 | cut -d'"' -f4)
+            echo "  $id  →  ${name:-Без названия}"
+        else
+            echo "  $id"
+        fi
+    done
+    echo "─────────────────────────────────"
+    echo "Всего: $(ls -1 "$WALLPAPER_DIR" | wc -l) обоев"
+}
+
+# Функция: запустить обои
+start() {
+    local wallpaper_id="${1:-$DEFAULT_WALLPAPER}"
+    echo "🎬 Запуск обоев $wallpaper_id на $SCREEN..."
+    pkill -f "$WALLPAPER_ENGINE" 2>/dev/null
+    nohup "$WALLPAPER_ENGINE" --screen-root "$SCREEN" --scaling stretch "$wallpaper_id" > /dev/null 2>&1 &
+    echo "✅ Обои запущены"
+}
+
+# Функция: остановить обои
+stop() {
+    echo "⏹️ Остановка обоев..."
+    pkill -f "linux-wallpaperengine"
+    echo "✅ Обои остановлены"
+}
+
+# Функция: перезапустить обои
+restart() {
+    stop
+    sleep 1
+    start "$1"
+}
+
+# Функция: статус
+status() {
+    if pgrep -f "$WALLPAPER_ENGINE" > /dev/null; then
+        echo "🟢 Обои запущены"
+        ps aux | grep "$WALLPAPER_ENGINE" | grep -v grep
+    else
+        echo "🔴 Обои не запущены"
+    fi
+}
+
+# Функция: случайный обой
+random() {
+    local random_id=$(ls -1 "$WALLPAPER_DIR" | shuf -n 1)
+    echo "🎲 Случайный выбор: $random_id"
+    start "$random_id"
+}
+
+# Функция: помощь
+show_help() {
+    cat << EOF
+🎨 Wallpaper Engine Controller для Noctalia
+
+Использование:
+  we [команда] [аргументы]
+
+Команды:
+  list, l         Показать список всех обоев
+  start [ID]      Запустить обои (по умолчанию: $DEFAULT_WALLPAPER)
+  stop, s         Остановить обои
+  restart, r [ID] Перезапустить обои
+  status, st      Показать статус
+  random, rand    Запустить случайный обой
+  help, h         Показать эту справку
+
+Примеры:
+  we start 3043373928    # Запустить конкретные обои
+  we list                # Посмотреть все ID
+  we random              # Случайные обои
+  we stop                # Остановить
+EOF
+}
+
+# Главная логика
+case "$1" in
+    list|l)
+        list_wallpapers
+        ;;
+    start)
+        start "$2"
+        ;;
+    stop|s)
+        stop
+        ;;
+    restart|r)
+        restart "$2"
+        ;;
+    status|st)
+        status
+        ;;
+    random|rand)
+        random
+        ;;
+    help|h|--help|-h)
+        show_help
+        ;;
+    *)
+        if [ -z "$1" ]; then
+            show_help
+        else
+            echo "❌ Неизвестная команда: $1"
+            echo "Используйте 'we help' для справки"
+            exit 1
+        fi
+        ;;
+esac
