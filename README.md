@@ -11,12 +11,12 @@
 - `we random` — запустить случайные обои
 - `we status` — показать статус (запущены/остановлены)
 
-## Установка
 
 ## Требования
 Wallpaper Engine (куплен в Steam),
 linux-wallpaperengine (установлен из AUR), желательно Arch Linux
 
+## Установка
 # Скачайте скрипт
 sudo curl -o /usr/local/bin/we https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we
 
