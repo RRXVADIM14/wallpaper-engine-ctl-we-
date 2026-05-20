@@ -19,3 +19,6 @@ sudo curl -o /usr/local/bin/we https://raw.githubusercontent.com/RRXVADIM14/wall
 # Сделайте исполняемым
 sudo chmod +x /usr/local/bin/we
 
+
+# Пример:
+<img width="1920" height="1080" alt="2026-05-20-224848_hyprshot" src="https://github.com/user-attachments/assets/3d7eb320-0670-4078-a67e-ca0904abdf63" />
