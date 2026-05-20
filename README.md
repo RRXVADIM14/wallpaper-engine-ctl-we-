@@ -1,6 +1,6 @@
-# we - Wallpaper Engine CLI для Noctalia
+# we - Wallpaper Engine CLI
 
-Простая консольная утилита для управления Wallpaper Engine на Noctalia Shell.
+Простая консольная утилита для управления Wallpaper Engine
 
 ## Возможности
 
