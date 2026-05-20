@@ -20,7 +20,6 @@
 ## 📦 Установка
 
 ### 1. Скачайте скрипт:
-```bash
 sudo curl -o /usr/local/bin/we [https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we](https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we)
 
 2. Сделайте его исполняемым:
@@ -48,7 +47,6 @@ P.S. Проект не тестировался на других дистриб
 
 ### 🔄 Напоминалка, как обновить это на GitHub:
 В своем терминале выполните по очереди:
-```bash
 cd ~/we-github
 nano README.md
 # (Очистите старый текст, вставьте этот красивый вариант, сохраните: Ctrl+O, Enter, Ctrl+X)
