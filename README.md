@@ -42,7 +42,7 @@ DEFAULT_WALLPAPER="2370927443"
 # 🔄 Как обновить README на GitHub
 cd ~/we-github
 nano README.md   
-# вставьте русскую версию или оставьте английскую
+-- вставьте русскую версию или оставьте английскую
 git add README.md
 git commit -m "Update README with Russian description"
 git push
