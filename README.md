@@ -20,7 +20,7 @@
 ## 📦 Установка
 
 ### 1. Скачайте скрипт:
-sudo curl -o /usr/local/bin/we [https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we](https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we)
+'''sudo curl -o /usr/local/bin/we [https://raw.githubusercontent.com/RRXVADIM14/wallpper-engine-ctl-we-/main/we](https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we)'''
 
 2. Сделайте его исполняемым:
 Bash
