@@ -38,10 +38,11 @@ WALLPAPER_DIR="/home/пользователь/.local/share/Steam/steamapps/works
 DEFAULT_WALLPAPER="2370927443"                
 
 ## Лицензия
- # MIT
-## 🔄 Как обновить README на GitHub
+ ## MIT
+# 🔄 Как обновить README на GitHub
 cd ~/we-github
-nano README.md   # вставьте русскую версию или оставьте английскую
+nano README.md   
+# вставьте русскую версию или оставьте английскую
 git add README.md
 git commit -m "Update README with Russian description"
 git push
