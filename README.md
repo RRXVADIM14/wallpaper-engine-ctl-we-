@@ -1,52 +1,58 @@
-# we - Wallpaper Engine CLI
+# we — Wallpaper Engine CLI
 
-Простая консольная утилита для управления Wallpaper Engine
+Простая консольная утилита для управления Wallpaper Engine в Linux.
 
-# Возможности
+## 🚀 Возможности
 
-- `we list` — показать список всех установленных обоев
-- `we start [ID]` — запустить обои (можно указать ID)
-- `we stop` — остановить обои
-- `we restart [ID]` — перезапустить обои
-- `we random` — запустить случайные обои
-- `we status` — показать статус (запущены/остановлены)
+* `we list` — показать список всех установленных обоев
+* `we start [ID]` — запустить обои (можно указать ID)
+* `we stop` — остановить обои
+* `we restart [ID]` — перезапустить обои
+* `we random` — запустить случайные обои
+* `we status` — показать статус (запущены/остановлены)
 
+## 📋 Требования
 
-# Требования
-Wallpaper Engine (куплен в Steam),
-linux-wallpaperengine (установлен из AUR), Arch Linux + WM
+* **Wallpaper Engine** (куплен и установлен в Steam)
+* **linux-wallpaperengine** (установлен из AUR или скомпилирован вручную)
+* **Arch Linux + WM** (Hyprland, Sway и др.)
 
-# Установка
-## Скачайте скрипт
-sudo curl -o /usr/local/bin/we https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we
+## 📦 Установка
 
-# Сделайте исполняемым
+### 1. Скачайте скрипт:
+```bash
+sudo curl -o /usr/local/bin/we [https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we](https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we)
+
+2. Сделайте его исполняемым:
+Bash
+
 sudo chmod +x /usr/local/bin/we
 
+📸 Пример работы
+⚙️ Настройка
 
-# Пример:
-<img width="1920" height="1080" alt="2026-05-20-224848_hyprshot" src="https://github.com/user-attachments/assets/3d7eb320-0670-4078-a67e-ca0904abdf63" />
+При необходимости отредактируйте переменные в начале скрипта (sudo nano /usr/local/bin/we):
+Bash
 
-# Настройка
-## При необходимости отредактируйте переменные в начале скрипта:
 WALLPAPER_ENGINE="/usr/sbin/linux-wallpaperengine"
-
 SCREEN="HDMI-A-1" 
-
 WALLPAPER_DIR="$HOME/.local/share/Steam/steamapps/workshop/content/431960"
-
 DEFAULT_WALLPAPER="2370927443"                
 
-## Лицензия
- ## MIT
-# 🔄 Как обновить README на GitHub
+📄 Лицензия
+
+MIT
+
+P.S. Проект не тестировался на других дистрибутивах Linux.
+
+
+### 🔄 Напоминалка, как обновить это на GitHub:
+В своем терминале выполните по очереди:
+```bash
 cd ~/we-github
-nano README.md   
--- вставьте русскую версию или оставьте английскую
+nano README.md
+# (Очистите старый текст, вставьте этот красивый вариант, сохраните: Ctrl+O, Enter, Ctrl+X)
 
 git add README.md
-git commit -m "Update README with Russian description"
-
+git commit -m "Update README with Russian description and dynamic path"
 git push
-
- P.S не тестировал на разных дистров линукс
