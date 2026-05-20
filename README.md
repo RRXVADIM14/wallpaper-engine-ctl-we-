@@ -22,8 +22,7 @@
 ### 1. Скачайте скрипт:
 sudo curl -o /usr/local/bin/we [https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we](https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we)
 
-2. Сделайте его исполняемым:
-Bash
+### 2. Сделайте его исполняемым:
 
 sudo chmod +x /usr/local/bin/we
 
@@ -31,7 +30,7 @@ sudo chmod +x /usr/local/bin/we
 ⚙️ Настройка
 
 При необходимости отредактируйте переменные в начале скрипта (sudo nano /usr/local/bin/we):
-Bash
+
 
 WALLPAPER_ENGINE="/usr/sbin/linux-wallpaperengine"
 SCREEN="HDMI-A-1" 
