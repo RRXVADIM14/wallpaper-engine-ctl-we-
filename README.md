@@ -15,7 +15,7 @@
 
 ## Требования
 Wallpaper Engine (куплен в Steam),
-linux-wallpaperengine (установлен из AUR)
+linux-wallpaperengine (установлен из AUR), желательно Arch Linux
 
 # Скачайте скрипт
 sudo curl -o /usr/local/bin/we https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we
