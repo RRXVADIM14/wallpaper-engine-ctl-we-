@@ -14,7 +14,7 @@
 
 # Требования
 Wallpaper Engine (куплен в Steam),
-linux-wallpaperengine (установлен из AUR), Arch Linux
+linux-wallpaperengine (установлен из AUR), Arch Linux + WM
 
 # Установка
 ## Скачайте скрипт
