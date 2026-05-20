@@ -46,6 +46,7 @@ nano README.md
 
 git add README.md
 git commit -m "Update README with Russian description"
+
 git push
 
  P.S не тестировал на разных дистров линукс
