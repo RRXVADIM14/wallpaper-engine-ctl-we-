@@ -1,15 +1,20 @@
-# wallpaper-engine-ctl-we
-Console CLI tool to control Wallpaper Engine on Noctalia Shell. List, start, stop, restart, or randomize wallpapers with simple commands like 'we start' or 'we random'.
+# we - Wallpaper Engine CLI для Noctalia
 
+Простая консольная утилита для управления Wallpaper Engine на Noctalia Shell.
+
+## Возможности
+
+- `we list` — показать список всех установленных обоев
+- `we start [ID]` — запустить обои (можно указать ID)
+- `we stop` — остановить обои
+- `we restart [ID]` — перезапустить обои
+- `we random` — запустить случайные обои
+- `we status` — показать статус (запущены/остановлены)
 
 ## Установка
-sudo cp we /usr/local/bin/
 
-## Использование
-we list
-we start [ID]
-we stop
+# Скачайте скрипт
+sudo curl -o /usr/local/bin/we https://raw.githubusercontent.com/RRXVADIM14/wallpaper-engine-ctl-we-/main/we
 
-## Зависимости:
-linux-wallpaperengine-git (AUR)
-Wallpaper Engine (Steam)
+# Сделайте исполняемым
+sudo chmod +x /usr/local/bin/we
