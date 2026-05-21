@@ -27,6 +27,9 @@ sudo curl -o /usr/local/bin/we [https://raw.githubusercontent.com/RRXVADIM14/wal
 sudo chmod +x /usr/local/bin/we
 
 📸 Пример работы
+
+<img width="1920" height="1080" alt="2026-05-21-100730_hyprshot" src="https://github.com/user-attachments/assets/67aaee00-10e4-4aa0-830d-c704c55a7121" />
+
 ⚙️ Настройка
 
 При необходимости отредактируйте переменные в начале скрипта (sudo nano /usr/local/bin/we):
