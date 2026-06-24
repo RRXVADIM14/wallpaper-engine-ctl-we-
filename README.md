@@ -48,14 +48,3 @@ DEFAULT_WALLPAPER="2370927443"
 MIT
 
 P.S. Проект не тестировался на других дистрибутивах Linux.
-
-
-### 🔄 Напоминалка, как обновить это на GitHub:
-В своем терминале выполните по очереди:
-cd ~/we-github
-nano README.md
-# (Очистите старый текст, вставьте этот красивый вариант, сохраните: Ctrl+O, Enter, Ctrl+X)
-
-git add README.md
-git commit -m "Update README with Russian description and dynamic path"
-git push
